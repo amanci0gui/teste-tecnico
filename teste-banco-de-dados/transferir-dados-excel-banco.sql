@@ -14,7 +14,7 @@ IGNORE 1 ROWS
     cargo_representante, regiao_de_comercializacao, data_registro_ans
 );
 
-
+select * from dados_operadoras;
 
 LOAD DATA INFILE 'C:\\teste-programacao\\demonstracoes-contabeis\\1T2023.csv'
 INTO TABLE dados_contabeis
