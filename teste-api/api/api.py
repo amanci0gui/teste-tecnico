@@ -1,8 +1,24 @@
 from fastapi import FastAPI, Query
 import pandas as pd
 from unidecode import unidecode
+from fastapi.middleware.cors import CORSMiddleware
+
 
 app = FastAPI()
+
+# Configuração do CORS: permite que o frontend se comunique com a API.
+origins = [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173"
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins, # Permite apenas as origens especificadas.
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 def carregar_dados(caminho_csv: str):
     """Carrega os dados do CSV em um DataFrame."""
