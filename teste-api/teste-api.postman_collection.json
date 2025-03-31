@@ -1,0 +1,117 @@
+{
+	"info": {
+		"_postman_id": "485b4425-2b20-486d-815d-f89b3378c1ab",
+		"name": "teste-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43630592",
+		"_collection_link": "https://guilhermepamancio-435962.postman.co/workspace/guilhermepamancio's-Workspace~800c1e33-4ff0-4ae1-8d8d-953bfb6edf5f/collection/43630592-485b4425-2b20-486d-815d-f89b3378c1ab?action=share&source=collection_link&creator=43630592"
+	},
+	"item": [
+		{
+			"name": "Listagem de Operadoras",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/buscar",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"buscar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Operadoras por Estado",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/buscar?uf=SP",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"buscar"
+					],
+					"query": [
+						{
+							"key": "uf",
+							"value": "SP"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Operadoras por Cidade",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/buscar?cidade=Santo+André",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"buscar"
+					],
+					"query": [
+						{
+							"key": "cidade",
+							"value": "Santo+André"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Detalhes de uma única operadora",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/buscar?query=Ameron",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"buscar"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "Ameron"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
